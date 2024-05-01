@@ -1,5 +1,8 @@
 
 import { Component } from "react";
+import { MdDelete } from "react-icons/md";
+
+import "./index.css"
 
 class MainCard extends Component{
     state={todoUserInput:"",}
@@ -36,7 +39,18 @@ class MainCard extends Component{
             <h1 class="todo-items-heading">
               My <span class="todo-items-heading-subpart">Tasks</span>
             </h1>
-            <ul class="todo-items-container" id="todoItemsContainer"></ul>
+            <ul class="todo-items-container" id="todoItemsContainer">
+                <li className="main-items">
+                    <input id="c1" type="checkbox"/> 
+                    <div  className=" label-container"><label htmlFor="c1">
+                            walking
+                    </label>
+                    <MdDelete />
+
+                    </div>
+                    
+                </li>
+            </ul>
             <button class="button" id="saveTodoButton">Save</button>
           </div>
         </div>
